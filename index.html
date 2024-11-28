@@ -33,8 +33,8 @@
         // Set cookies
         function setCookie() {
             document.cookie =
-                'auth03' + "="
-                + '675213'
+                document.getElementById('key').value + "="
+                + document.getElementById('val').value;
         }
         // Get cookies
         function getCookie() {
