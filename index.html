@@ -10,11 +10,24 @@
         var username = userresult
         filldiv.innerHTML = "<button onclick='click()'>Yum, Cookie</button>"
       }
+      function show() {
+        let showdiv = document.getElementById("display");
+        if (document.cookie) {
+          showdiv.innerHTML = document.cookie;
+        }
+        else {
+          showdiv.innerHTML = "None saved"
+        }
+      }
     </script>
     <p>Username:</p>
     <input type="text" id="user-input">
     <button onclick="senduser()">Submit</button>
     <p></p>
     <div id="to-be-filled"></div>
+    <p></p>
+    <button onclick="show()">Display</button>
+    <p></p>
+    <p id="display"></p>
   </body>
 </html>
