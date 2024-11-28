@@ -1,33 +1,47 @@
+<!DOCTYPE html>
 <html>
-  <body>
+
+<head>
+    <title>Cookie</title>
+    <style>
+        h1 {
+            color: green
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks!</h1>
+
+    <!-- Name for Cookie -->
+    <input type="text" id="key" placeholder="Name">
+
+    <!-- Value for the cookie -->
+    <input type="text" id="val" placeholder="Value">
+    <br>
+
+    <!-- button to set cookie -->
+    <button onclick="setCookie()">Set a cookie</button>
+    <br>
+
+    <!-- Button to get cookie -->
+    <button onclick="getCookie()">Get cookies</button>
+
+    <!-- Empty Paragraph element to display Cookies -->
+    <p id="cookies"></p>
     <script>
-      function click() {
-        let userresult = document.getElementById("user-input").value;
-        var username = userresult;
-        document.cookie = "username=" + username + "; expires=Thu, 01 Jan 2030 00:00:00 UTC; path=/;";
-      }
-      function senduser() {
-        let filldiv = document.getElementById("to-be-filled");
-        filldiv.innerHTML = "<button onclick='click()'>Yum, Cookie</button>"
-      }
-      function show() {
-        let showdiv = document.getElementById("display");
-        if (document.cookie) {
-          showdiv.innerHTML = document.cookie;
+        // Set cookies
+        function setCookie() {
+            document.cookie =
+                document.getElementById('key').value + "="
+                + document.getElementById('val').value;
         }
-        else {
-          showdiv.innerHTML = "None saved"
+        // Get cookies
+        function getCookie() {
+            document.getElementById("cookies").innerHTML =
+                document.cookie;
         }
-      }
     </script>
-    <p>Username:</p>
-    <input type="text" id="user-input">
-    <button onclick="senduser()">Submit</button>
-    <p></p>
-    <div id="to-be-filled"></div>
-    <p></p>
-    <button onclick="show()">Display</button>
-    <p></p>
-    <p id="display"></p>
-  </body>
+</body>
+
 </html>
