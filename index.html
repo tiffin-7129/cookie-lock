@@ -30,11 +30,15 @@
     <!-- Empty Paragraph element to display Cookies -->
     <p id="cookies"></p>
     <script>
+        //key
+        var key = "auth03"
+        //val
+        var val = "923081"
         // Set cookies
         function setCookie() {
             document.cookie =
-                document.getElementById('key').value + "="
-                + document.getElementById('val').value;
+                key + "="
+                + val
         }
         // Get cookies
         function getCookie() {
