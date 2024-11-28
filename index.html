@@ -13,19 +13,7 @@
   function cloak() {
     window.location.href = "https://classroom.google.com";
     let cloaked_window = window.open("about:blank", "_blank", "width=100%,height=100%");
-    cloaked_window.document.write(`
-        <button onclick='setCookie()'>Yum, Cookies!</button>
-        <script>
-        var key = 'auth03'
-        //val
-        var val = '923081'
-        // Set cookies
-        function setCookie() {
-            document.cookie =
-                key + '='
-                + val
-            }
-            </script>`)
+    cloaked_window.document.write(`<button onclick='setCookie()'>Yum, Cookies!</button><script> var key = 'auth03' var val = '923081'function setCookie() {document.cookie = key + '='+ val}</script>`)
   cloak()
   </script>
 </body>
